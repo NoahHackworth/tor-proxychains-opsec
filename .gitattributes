@@ -2,8 +2,8 @@
 * text=auto eol=lf
 
 # Explicit for our scripts and configs
-*.sh     text eol=lf
-*.zsh    text eol=lf
-shell/*  text eol=lf
-config/* text eol=lf
-README.md text eol=lf
+*.sh         text eol=lf
+*.zsh        text eol=lf
+shell/*      text eol=lf
+config/*     text eol=lf
+README.md    text eol=lf
