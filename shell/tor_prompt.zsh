@@ -1,4 +1,4 @@
-# Tor-mode prompt + pcsh function
+# Tor-mode prompt + pcsh function for zsh
 autoload -U add-zsh-hook
 
 # Remember base prompt so we can restore later
@@ -24,6 +24,6 @@ pcsh() {
     echo "       Start it: sudo systemctl start tor"
     return 1
   fi
-  # PC_TOR_MODE=1 sets a flag for this shell and children; precmd hook paints the prompt.
+  # PC_TOR_MODE=1 sets a flag for this shell and children; precmd hook paints the prompt
   PC_TOR_MODE=1 proxychains4 zsh -i
 }
