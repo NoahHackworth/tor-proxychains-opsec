@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Standalone launcher (same behavior as the zsh function)
+
+if ! ss -ltn '( sport = :9050 )' | grep -q 9050; then
+  echo "[pcsh] Tor is not listening on 127.0.0.1:9050."
+  echo "       Start it: sudo systemctl start tor"
+  exit 1
+fi
+
+export PC_TOR_MODE=1
+exec proxychains4 zsh -i
