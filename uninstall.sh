@@ -15,5 +15,5 @@ echo "Removing helper files..."
 rm -rf "$HOME/.tor-proxychains-opsec"
 rm -f "$HOME/.local/bin/pcsh" "$HOME/.local/bin/torcheck"
 
-echo "You may also remove Tor if desired: sudo apt remove tor proxychains4 torsocks"
+echo "Optional: remove packages with 'sudo apt remove tor proxychains4 torsocks'"
 echo "Done."
