@@ -31,3 +31,39 @@ git clone https://github.com/yourname/tor-proxychains-opsec.git
 cd tor-proxychains-opsec
 chmod +x install.sh
 ./install.sh
+```
+## After you clone on Linux, Run:
+
+
+Run these once:
+
+1) Make scripts executable (so the kernel can run them directly)
+```
+chmod +x install.sh uninstall.sh shell/pcsh shell/torcheck
+```
+2) Install (explained):
+- ./install.sh runs with bash (shebang selects /usr/bin/env bash)
+- It installs Tor/proxychains/torsocks, writes configs, adds zsh hooks, restarts Tor
+```
+./install.sh
+```
+3) Load your new shell config without restarting the terminal
+```
+source ~/.zshrc
+```
+4) Enter TOR mode shell (proxychains-wrapped) — prompt shows [ TOR ]
+```
+pcsh
+```
+5) Verify routing (prints plain IP, Tor-over-SOCKS IP, proxychains IP, and DNS test)
+```
+torcheck
+```
+## All these in one commad:
+```
+chmod +x install.sh uninstall.sh shell/pcsh shell/torcheck
+./install.sh
+source ~/.zshrc
+pcsh
+torcheck
+```
