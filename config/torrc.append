@@ -1,3 +1,3 @@
 # Added by tor-proxychains-opsec
-# You can uncomment the next line to avoid IPv6 if exits/targets cause issues:
+# Uncomment the next line to avoid IPv6 circuits if you hit IPv6 issues:
 # ClientUseIPv6 0
